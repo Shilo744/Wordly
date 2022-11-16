@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Wordly</title>
-    <script src ="js.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="css.css">
-</head>
-<body>
-<br>
-<div class="container">
-    <div id="5" class="box"></div> <div id="4" class="box"></div> <div id="3" class="box"></div> <div id="2" class="box"></div> <div id="1" class="box"></div>
-    <div id="10" class="box"></div> <div id="9" class="box"></div> <div id="8" class="box"></div> <div id="7" class="box"></div> <div id="6" class="box"></div>
-    <div id="15" class="box"></div> <div id="14" class="box"></div> <div id="13" class="box"></div> <div id="12" class="box"></div> <div id="11" class="box"></div>
-    <div id="20" class="box"></div> <div id="19" class="box"></div> <div id="18" class="box"></div> <div id="17" class="box"></div> <div id="16" class="box"></div>
-    <div id="25" class="box"></div> <div id="24" class="box"></div> <div id="23" class="box"></div> <div id="22" class="box"></div> <div id="21" class="box"></div>
-    <div id="30" class="box"></div> <div id="29" class="box"></div> <div id="28" class="box"></div> <div id="27" class="box"></div> <div id="26" class="box"></div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Wordly</title>
+        <script src ="js.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+        <br>
+            <div class="container">
+                <div id="5" class="box"></div> <div id="4" class="box"></div> <div id="3" class="box"></div> <div id="2" class="box"></div> <div id="1" class="box"></div>
+                <div id="10" class="box"></div> <div id="9" class="box"></div> <div id="8" class="box"></div> <div id="7" class="box"></div> <div id="6" class="box"></div>
+                <div id="15" class="box"></div> <div id="14" class="box"></div> <div id="13" class="box"></div> <div id="12" class="box"></div> <div id="11" class="box"></div>
+                <div id="20" class="box"></div> <div id="19" class="box"></div> <div id="18" class="box"></div> <div id="17" class="box"></div> <div id="16" class="box"></div>
+                <div id="25" class="box"></div> <div id="24" class="box"></div> <div id="23" class="box"></div> <div id="22" class="box"></div> <div id="21" class="box"></div>
+                <div id="30" class="box"></div> <div id="29" class="box"></div> <div id="28" class="box"></div> <div id="27" class="box"></div> <div id="26" class="box"></div>
 
-</div>
-<br>
-<div class="keyboard line">
-    <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ק</button>
-    <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ר</button>
-    <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">א</button>
-    <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ט</button>
-    <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ו</button>
-    <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ן</button>
-    <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ם</button>
-    <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">פ</button>
-    <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ף</button>
-    <button class="key bigger" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="deleteLetter()">מחק</button>
+            </div>
+        <br>
+        <div class="keyboard line">
+            <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ק</button>
+            <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ר</button>
+            <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">א</button>
+            <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ט</button>
+            <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ו</button>
+            <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ן</button>
+            <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ם</button>
+            <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">פ</button>
+            <button class="key" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)">ף</button>
+            <button class="key bigger" onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="deleteLetter()">מחק</button>
 
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ש</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ד</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ג</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">כ</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ע</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">י</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ח</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ל</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ך</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="nextLine()" class="key bigger">אשר</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ש</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ד</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ג</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">כ</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ע</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">י</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ח</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ל</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ך</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="nextLine()" class="key bigger">אשר</button>
 
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ז</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ס</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ב</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ה</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">נ</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">מ</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">צ</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ת</button>
-    <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ץ</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ז</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ס</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ב</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ה</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">נ</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">מ</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">צ</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ת</button>
+            <button onmouseover="mouseover(this)" onmouseleave="mouseout(this)" onclick="changeLetter(this)" class="key">ץ</button>
 
-</div>
-</body>
+        </div>
+    </body>
 </html>

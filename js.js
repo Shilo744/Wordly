@@ -38,10 +38,10 @@ function nextLine(){
 function checkCorrection(){
     let location=(line)*maxColumn;
     let insideWord=
-        document.getElementById((location+1).toString()).innerText+
-        document.getElementById((location+2).toString()).innerText+
-        document.getElementById((location+3).toString()).innerText+
-        document.getElementById((location+4).toString()).innerText+
+        document.getElementById((location+1).toString()).innerText +
+        document.getElementById((location+2).toString()).innerText +
+        document.getElementById((location+3).toString()).innerText +
+        document.getElementById((location+4).toString()).innerText +
         document.getElementById((location+5).toString()).innerText;
 
     for (let i = 0; i < word.length; i++) {
