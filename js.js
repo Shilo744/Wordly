@@ -9,12 +9,13 @@ let checkThatAllBoxesAreFull=0;
 let words=["טיגון","לישון","לחמוד","הימור","אכלתי","מגניב","חליפה","תחקיר","שליחה","קליפה"];
 function changeLetter(element){
     if(gameOn){
-    if((line+correction)*maxColumn>=letterLocation){
-    document.getElementById(letterLocation.toString()).innerText=element.innerText;
-        document.getElementById(letterLocation.toString()).style.border="1px solid black";
-        letterLocation++;}
-
-}}
+        if((line+correction)*maxColumn>=letterLocation){
+            document.getElementById(letterLocation.toString()).innerText=element.innerText;
+            document.getElementById(letterLocation.toString()).style.border="1px solid black";
+            letterLocation++;
+        }
+    }
+}
 function deleteLetter(){
     if(letterLocation>line*maxColumn+correction){
         letterLocation--;
@@ -26,11 +27,12 @@ function nextLine(){
     if(isFirst){
         let random=Math.ceil(Math.random() * (words.length-correction));
         word=words[random];
-    isFirst=false;}
+        isFirst=false;
+    }
 
     if((letterLocation)%(maxColumn*(line+correction)+correction)===checkThatAllBoxesAreFull){
         checkCorrection();
-    line++;
+        line++;
     }
 }
 function checkCorrection(){
@@ -63,7 +65,8 @@ function checkCorrection(){
     for (let i = 0; i < word.length; i++) {
         if(document.getElementById((location+i+correction).toString()).style.backgroundColor!=="green"){
             break;
-        }else {gameOn=false;
+        }else {
+            gameOn=false;
             break;
         }
     }
