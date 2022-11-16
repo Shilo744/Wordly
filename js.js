@@ -36,7 +36,7 @@ function nextLine(){
     }
 }
 function checkCorrection(){
-    let location=(line)*maxColumn;
+    let location= line * maxColumn;
     let insideWord=
         document.getElementById((location+1).toString()).innerText +
         document.getElementById((location+2).toString()).innerText +
