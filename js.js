@@ -7,15 +7,14 @@ let gameOn=true;
 let correction=1;
 let checkThatAllBoxesAreFull=0;
 let words=["טיגון","לישון","לחמוד","הימור","אכלתי","מגניב","חליפה","תחקיר","שליחה","קליפה"];
-function changeLetter(element){
+function changeLetter(key){
     if(gameOn){
-        if((line+correction)*maxColumn>=letterLocation){
-            document.getElementById(letterLocation.toString()).innerText=element.innerText;
-            document.getElementById(letterLocation.toString()).style.border="1px solid black";
-            letterLocation++;
-        }
-    }
-}
+    if((line+correction)*maxColumn>=letterLocation){
+    document.getElementById(letterLocation.toString()).innerText=key.innerText;
+        document.getElementById(letterLocation.toString()).style.border="1px solid black";
+        letterLocation++;}
+
+}}
 function deleteLetter(){
     if(letterLocation>line*maxColumn+correction){
         letterLocation--;
@@ -27,21 +26,20 @@ function nextLine(){
     if(isFirst){
         let random=Math.ceil(Math.random() * (words.length-correction));
         word=words[random];
-        isFirst=false;
-    }
+    isFirst=false;}
 
     if((letterLocation)%(maxColumn*(line+correction)+correction)===checkThatAllBoxesAreFull){
         checkCorrection();
-        line++;
+    line++;
     }
 }
 function checkCorrection(){
     let location= line * maxColumn;
     let insideWord=
-        document.getElementById((location+1).toString()).innerText +
-        document.getElementById((location+2).toString()).innerText +
-        document.getElementById((location+3).toString()).innerText +
-        document.getElementById((location+4).toString()).innerText +
+        document.getElementById((location+1).toString()).innerText+
+        document.getElementById((location+2).toString()).innerText+
+        document.getElementById((location+3).toString()).innerText+
+        document.getElementById((location+4).toString()).innerText+
         document.getElementById((location+5).toString()).innerText;
 
     for (let i = 0; i < word.length; i++) {
