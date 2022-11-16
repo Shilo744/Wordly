@@ -1,12 +1,12 @@
 let letterLocation=1;
 let line=0;
-let maxColumn=5;
+const maxColumn=5;
 let word;
 let isFirst=true;
 let gameOn=true;
-let correction=1;
+const correction=1;
 let checkThatAllBoxesAreFull=0;
-let words=["טיגון","לישון","לחמוד","הימור","אכלתי","מגניב","חליפה","תחקיר","שליחה","קליפה"];
+const words=["טיגון","לישון","לחמוד","הימור","אכלתי","מגניב","חליפה","תחקיר","שליחה","וילון","רמקול","אפרוח","טאבלט","חולצה","משאית","שולחן","אלבום","מנורה","מדפסת","קליפה"];
 function changeLetter(key){
     if(gameOn){
     if((line+correction)*maxColumn>=letterLocation){
