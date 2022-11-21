@@ -10,7 +10,11 @@ const words=["טיגון","לישון","לחמוד","הימור","אכלתי","�
 function changeLetter(key){
     if(gameOn){
     if((line+correction)*maxColumn>=letterLocation){
-    document.getElementById(letterLocation.toString()).innerText=key.innerText;
+if(key.innerText!=null){
+    document.getElementById(letterLocation.toString()).innerText=key.innerText;}
+else{
+    document.getElementById(letterLocation.toString()).innerText=key;
+}
         document.getElementById(letterLocation.toString()).style.border="1px solid black";
         letterLocation++;}
 
@@ -60,14 +64,20 @@ function checkCorrection(){
             document.getElementById((location+k+correction).toString()).style.backgroundColor="green";
         }
     }
-    for (let i = 0; i < word.length; i++) {
-        if(document.getElementById((location+i+correction).toString()).style.backgroundColor!=="green"){
-            break;
-        }else {
-            gameOn=false;
-            break;
-        }
+}
+function keyboard(event) {
+    var letter = event.key;
+    if(letter>='א' && letter<='ת'){
+    changeLetter(letter);}
+    else if(letter==='Enter'){
+        nextLine();
     }
+    else if(letter==='Backspace'){
+        deleteLetter();
+    }
+    // if (event.t) {
+    // changeLetter(x);
+    // }
 }
 function mouseover(element){
     element.style.color = "lime";
