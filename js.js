@@ -30,7 +30,6 @@ function nextLine(){
     if(isFirst){
         let random=Math.ceil(Math.random() * (words.length-correction));
         word=words[random];
-        document.getElementById("a").innerText=word;
     isFirst=false;}
 
     if((letterLocation)%(maxColumn*(line+correction)+correction)===checkThatAllBoxesAreFull){
