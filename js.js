@@ -30,6 +30,7 @@ function nextLine(){
     if(isFirst){
         let random=Math.ceil(Math.random() * (words.length-correction));
         word=words[random];
+        document.getElementById("a").innerText=word;
     isFirst=false;}
 
     if((letterLocation)%(maxColumn*(line+correction)+correction)===checkThatAllBoxesAreFull){
@@ -47,6 +48,7 @@ function checkCorrection(){
         document.getElementById((location+5).toString()).innerText;
 
     for (let i = 0; i < word.length; i++) {
+        document.getElementById((location+i+correction).toString()).style.color="white";
         document.getElementById((location+i+correction).toString()).style.backgroundColor="slategrey";
         document.getElementById((location+i+correction).toString()).style.border="1px solid lightgrey";
 
@@ -59,9 +61,16 @@ function checkCorrection(){
         }
     }
     for (let k = 0; k <word.length; k++) {
-        document.getElementById((location+k+correction).toString()).style.color="white";
+
         if(word[k]===insideWord[k]){
             document.getElementById((location+k+correction).toString()).style.backgroundColor="green";
+        }
+    }
+    gameOn=false;
+    for (let i = 0; i < word.length; i++) {
+        if(document.getElementById((location+i+correction).toString()).style.backgroundColor!=="green"){
+            gameOn=true;
+            break;
         }
     }
 }
