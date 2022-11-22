@@ -75,9 +75,6 @@ function keyboard(event) {
     else if(letter==='Backspace'){
         deleteLetter();
     }
-    // if (event.t) {
-    // changeLetter(x);
-    // }
 }
 function mouseover(element){
     element.style.color = "lime";
