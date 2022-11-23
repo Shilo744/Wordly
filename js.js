@@ -1,4 +1,5 @@
 let letterLocation=1;
+const maxLetter=30;
 let line=0;
 const maxColumn=5;
 let word;
@@ -18,7 +19,8 @@ else{
         document.getElementById(letterLocation.toString()).style.border="1px solid black";
         letterLocation++;}
 
-}}
+}
+}
 function deleteLetter(){
     if(letterLocation>line*maxColumn+correction){
         letterLocation--;
@@ -66,6 +68,7 @@ function checkCorrection(){
         }
     }
     gameOn=false;
+    if (letterLocation<maxLetter){
     for (let i = 0; i < word.length; i++) {
         if(document.getElementById((location+i+correction).toString()).style.backgroundColor!=="green"){
             gameOn=true;
@@ -73,8 +76,10 @@ function checkCorrection(){
         }
     }
 }
+}
+
 function keyboard(event) {
-    var letter = event.key;
+    const letter = event.key;
     if(isLetter(letter)){
     changeLetter(letter);}
     else if(letter==='Enter'){
