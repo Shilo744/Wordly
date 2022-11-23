@@ -75,7 +75,7 @@ function checkCorrection(){
 }
 function keyboard(event) {
     var letter = event.key;
-    if(letter>='א' && letter<='ת'){
+    if(isLetter(letter)){
     changeLetter(letter);}
     else if(letter==='Enter'){
         nextLine();
@@ -89,4 +89,13 @@ function mouseover(element){
 }
 function mouseout(element){
     element.style.color = "black";
+}
+function isLetter(letter) {
+    const letters=["ק","ר","א","ט","ו","ן","ם","פ","ש","ד","ג","כ","ע","י","ח","ל","ך","ף","ז","ס","ב","ה","נ","מ","ץ","ת","צ"];
+    for (let i = 0; i < letters.length; i++) {
+        if(letter===letters[i]){
+            return true;
+        }
+    }
+    return false;
 }
